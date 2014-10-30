@@ -16,18 +16,40 @@ def write_moby(counter,sample,dirname):
     dir1= level1
     dir2= dir1 + '/' + level2
     dir3= dir2 + '/' + level3
+        
     for the_dir in [dir1,dir2,dir3,dirname]:
         level=find_level(the_dir)
     #
     # loop through the four directories in
     # [dir1,dir2,dir3,dirname] and
-    # write a new chapter of moby dict in each folder by
+    # write a new paragraph of moby dict in each folder by
     # opening and writing 1 file the level1 folder, 2 files in
     # each of the level 2 folders, 3 files in level3 folders
     # and 4 files in level4.  Use the counter variable to
     # make sure that each file gets a different paragraph of moby dick
     #
-
+        
+        # assuming instructions above apply for each call of write_moby
+        
+        # start a counter for the number of files needed to be written per level
+        file_count = 1
+        
+        # while file_count is less than the current directory level
+        while file_count <= level: 
+            
+            # get full path name
+            filename = 'paragraph_{}.txt'.format(counter)
+            full_path = the_dir + '/' + filename
+            
+            # write paragraph to file
+            with open(full_path,'w') as f:
+                f.write(sample[counter])
+                
+            # increment paragraph counter
+            counter = counter + 1
+            # increment file_count
+            file_count = file_count + 1
+        
     return counter
 
 if __name__=="__main__":
