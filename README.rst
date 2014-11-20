@@ -127,4 +127,44 @@ Use space instead of tabs -- note that python lets you do this::
 Test it on the folder tree you built in Assignment 4, but also make sure it works on
 any set of nested folders.
 
+* `assignment5_sol.py <https://github.com/a301-teaching/cpsc189/blob/master/lib/assignment5_sol.py>`_
+
   
+Assignment 6:
+_____________
+
+* Read chaper 17 of http://www.greenteapress.com/thinkpython/html/index.html
+  and check in your solution
+  to exercise 7 (http://www.greenteapress.com/thinkpython/html/thinkpython018.html)
+
+* `assignment6.py <https://github.com/a301-teaching/cpsc189/blob/master/lib/assignment6.py>`_
+  
+Assignment 7:
+_____________
+  
+* Redo `stull_radar_II.py <https://github.com/a301-teaching/classcode/blob/master/lib/stull_radar_II.py>`_
+  but instead of passing a dictionary of parameters to the functions, make them member functions
+  of a class called radar.  That is, write something like this::
+
+    class Radar(object):
+
+      def __init__(self,Pt,R1,b):
+          self.Pt=Pt
+          ....
+
+      def finddbz(self,Pr,K2,La,R):
+          ...
+
+      def findRR_snow(dbZ):
+
+      etc.
+
+  and then use an instance of this class
+
+  nexrad=Radar(Pt,R1,b)
+
+  to answer the questions.
+
+ 
+
+ 
